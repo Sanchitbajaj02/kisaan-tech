@@ -7,7 +7,7 @@
 
 .banner {
   height: 85vh;
-  background: url('/image/david-henrichs-72AYEEBJpz4-unsplash.jpg') center center no-repeat fixed;
+  background: url('../image/david-henrichs-72AYEEBJpz4-unsplash.jpg') center center no-repeat fixed;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
 
