@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css">
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container py-2">
-            <a class="navbar-brand" href="">Navbar</a>
+            <a class="navbar-brand" href="">KT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,33 +24,34 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-1">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a class="nav-link" href="/services.html">Services</a>
+                        <a class="nav-link" href="./services.html">Services</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a class="nav-link btn btn-info text-white" role="button" href="/login.html">Login</a>
+                        <a class="nav-link btn btn-info text-white" role="button" href="./login.html">Login</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a class="nav-link btn btn-danger text-white" role="button" href="/register.html">Register</a>
+                        <a class="nav-link btn btn-danger text-white" role="button" href="./register.html">Register</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- banner -->
     <div class="container my-4">
         <section class="banner flex">
             <div class="container">
                 <div class="banner-context">
-                    <p>Shop our latest Products</p>
-                    <button class="btn btn-info">Click to purchase</button>
+                    <h3 class="display-4">Kisaan-Tech</h3>
                 </div>
             </div>
         </section>
     </div>
 
+    <!-- about -->
     <section class="container">
         <div class="about-section">
             <h2 class="h2">About Us</h2>
@@ -68,6 +71,7 @@
         </div>
     </section>
 
+    <!-- card carousel -->
     <div class="container text-center my-5">
         <h2 class="font-weight-dark">Our Products</h2>
         <div class="row mx-auto my-auto">
@@ -172,18 +176,21 @@
         </div>
     </div>
 
+    <!-- footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row py-3">
-                <div class="col-12 col-sm-6">
-                    Contact Us
-                    <hr />
+            <div class="row">
+                <div class="col-12 col-sm-6 py-4">
+                    <span class="footHeading py-2">Contact Us
+                        <hr id="line">
+                    </span>
                     <i class="fa fa-home"></i> ABC, That Street, Delhi, India <br />
                     <i class="fa fa-phone"></i> +910123456789
                 </div>
-                <div class="col-12 col-sm-6">
-                    Social Media
-                    <hr />
+                <div class="col-12 col-sm-6 py-4">
+                    <span class="footHeading">Social Media
+                        <hr id="line">
+                    </span>
                     <i class="fab fa-github fa-2x"></i>&emsp;
                     <i class="fab fa-linkedin fa-2x"></i>&emsp;
                     <i class="far fa-envelope fa-2x"></i>
@@ -191,7 +198,7 @@
             </div>
         </div>
 
-        <div class="bg-dark text-light py-1">
+        <div class="bg-dark text-light py-2">
             <div class="d-flex justify-content-center align-items-center">
                 Copyrights &copy;
                 <script>
