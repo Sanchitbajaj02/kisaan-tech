@@ -22,26 +22,34 @@ $(".carousel .carousel-item").each(function () {
   }
 });
 
-//backend js
-const fs = require('fs');
-const { throws } = require('assert');
-
 window.addEventListener("DOMContentLoaded", () => {
   let loginForm = document.querySelector("#loginForm");
 
-
-  loginForm.addEventListener("submit", async () => {
-    await fetch("http://127.0.0.1:5500/login.html", () => {
-      method: "POST";
+  let responseCode;
+  loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const resp = await fetch(constants.baseURL + "/auth/local", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
       body: JSON.stringify({
-        username: loginForm["username"].value,
-        password: loginForm["password"].value
-      });
-
-      fs.writeFile("abc.txt", "login.html", (err, file) => {
-        if (err) throw err
-        console.log("STore");
-      })
+        identifier: loginForm["username"].value,
+        password: loginForm["password"].value,
+      }),
     });
+
+    responseCode = resp.status;
+
+    const result = await resp.json();
+    console.log(result);
+    if (responseCode == 200) {
+      window.localStorage.setItem("jwt", result.jwt);
+      window.localStorage.setItem("userId", result.user.id);
+      window.localStorage.setItem("email", result.user.email);
+      //   window.location.href = "/index.html";
+    } else {
+      console.log("invalid credentials");
+    }
   });
 });

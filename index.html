@@ -1,219 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kisaan-Tech | Home</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="./js/constants.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/form.css">
-</head>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
 
-<body>
+  <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container py-2">
-            <a class="navbar-brand" href="">KT</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-1">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link" href="./services.html">Services</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link btn btn-info text-white" role="button" href="./login.html">Login</a>
-                    </li>
-                    <li class="nav-item mx-1">
-                        <a class="nav-link btn btn-danger text-white" role="button" href="./register.html">Register</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container py-2">
+        <a class="navbar-brand" href="">KT</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-1">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="./services.html">Services</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link btn btn-info text-white"
+                role="button"
+                href="./login.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link btn btn-danger text-white"
+                role="button"
+                href="./register.html"
+                >Register</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- banner -->
     <div class="container my-4">
-        <section class="banner flex">
-            <div class="container">
-                <div class="banner-context">
-                    <h3 class="display-4">Kisaan-Tech</h3>
-                </div>
-            </div>
-        </section>
+      <section class="banner flex">
+        <div class="container">
+          <div class="banner-context">
+            <h3 class="display-4">Kisaan-Tech</h3>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- about -->
     <section class="container">
-        <div class="about-section">
-            <h2 class="h2">About Us</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
-                possimus necessitatibus ea expedita asperiores, nulla quasi eaque id
-                saepe impedit et nemo assumenda totam maxime natus quia! Nihil tempora
-                nam quia numquam perferendis pariatur magnam excepturi sapiente odio
-                fugit. Recusandae quos voluptatem similique quaerat perferendis
-                temporibus molestiae, nostrum iusto velit officia voluptas dicta quam
-                tempore error sit eveniet, aperiam quae aliquam at nobis veritatis
-                dolor vel? Ipsa enim sed a, aperiam itaque eveniet quod repudiandae
-                rerum porro ut, ipsam facere eligendi nam vitae, quasi earum sunt
-                quisquam modi perferendis delectus. Voluptates, aut quasi. Sed odio ab
-                perspiciatis hic voluptates modi.
-            </p>
-        </div>
+      <div class="about-section">
+        <h2 class="h2">About Us</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
+          possimus necessitatibus ea expedita asperiores, nulla quasi eaque id
+          saepe impedit et nemo assumenda totam maxime natus quia! Nihil tempora
+          nam quia numquam perferendis pariatur magnam excepturi sapiente odio
+          fugit. Recusandae quos voluptatem similique quaerat perferendis
+          temporibus molestiae, nostrum iusto velit officia voluptas dicta quam
+          tempore error sit eveniet, aperiam quae aliquam at nobis veritatis
+          dolor vel? Ipsa enim sed a, aperiam itaque eveniet quod repudiandae
+          rerum porro ut, ipsam facere eligendi nam vitae, quasi earum sunt
+          quisquam modi perferendis delectus. Voluptates, aut quasi. Sed odio ab
+          perspiciatis hic voluptates modi.
+        </p>
+      </div>
     </section>
 
     <!-- card carousel -->
     <div class="container text-center my-5">
-        <h2 class="font-weight-dark">Our Products</h2>
-        <div class="row mx-auto my-auto">
-            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-                <div class="carousel-inner w-100" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="col-md-4">
-                            <div class="card card-body">
-                                <img class="img-fluid" src="http://placehold.it/380?text=1" />
-                                <div>
-                                    <h4>Title</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Est molestias ratione sit accusantium, ipsa omnis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card card-body">
-                                <img class="img-fluid" src="http://placehold.it/380?text=2" />
-                                <div>
-                                    <h4>Title</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Est molestias ratione sit accusantium, ipsa omnis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card card-body">
-                                <img class="img-fluid" src="http://placehold.it/380?text=3" />
-                                <div>
-                                    <h4>Title</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Est molestias ratione sit accusantium, ipsa omnis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card card-body">
-                                <img class="img-fluid" src="http://placehold.it/380?text=4" />
-                                <div>
-                                    <h4>Title</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Est molestias ratione sit accusantium, ipsa omnis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card card-body">
-                                <img class="img-fluid" src="http://placehold.it/380?text=5" />
-                                <div>
-                                    <h4>Title</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Est molestias ratione sit accusantium, ipsa omnis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card card-body">
-                                <img class="img-fluid" src="http://placehold.it/380?text=6" />
-                                <div>
-                                    <h4>Title</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Est molestias ratione sit accusantium, ipsa omnis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <h2 class="font-weight-dark">Our Products</h2>
+      <div class="row mx-auto my-auto">
+        <div
+          id="recipeCarousel"
+          class="carousel slide w-100"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner w-100" role="listbox">
+            <div class="carousel-item active">
+              <div class="col-md-4">
+                <div class="card card-body">
+                  <img class="img-fluid" src="http://placehold.it/380?text=1" />
+                  <div>
+                    <h4>Title</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Est molestias ratione sit accusantium, ipsa omnis.
+                    </p>
+                  </div>
                 </div>
-                <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
-                        aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
-                        aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+              </div>
             </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card card-body">
+                  <img class="img-fluid" src="http://placehold.it/380?text=2" />
+                  <div>
+                    <h4>Title</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Est molestias ratione sit accusantium, ipsa omnis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card card-body">
+                  <img class="img-fluid" src="http://placehold.it/380?text=3" />
+                  <div>
+                    <h4>Title</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Est molestias ratione sit accusantium, ipsa omnis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card card-body">
+                  <img class="img-fluid" src="http://placehold.it/380?text=4" />
+                  <div>
+                    <h4>Title</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Est molestias ratione sit accusantium, ipsa omnis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card card-body">
+                  <img class="img-fluid" src="http://placehold.it/380?text=5" />
+                  <div>
+                    <h4>Title</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Est molestias ratione sit accusantium, ipsa omnis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card card-body">
+                  <img class="img-fluid" src="http://placehold.it/380?text=6" />
+                  <div>
+                    <h4>Title</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Est molestias ratione sit accusantium, ipsa omnis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev w-auto"
+            href="#recipeCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next w-auto"
+            href="#recipeCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+      </div>
     </div>
 
     <!-- footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-6 py-4">
-                    <span class="footHeading py-2">Contact Us
-                        <hr id="line">
-                    </span>
-                    <i class="fa fa-home"></i> ABC, That Street, Delhi, India <br />
-                    <i class="fa fa-phone"></i> +910123456789
-                </div>
-                <div class="col-12 col-sm-6 py-4">
-                    <span class="footHeading">Social Media
-                        <hr id="line">
-                    </span>
-                    <i class="fab fa-github fa-2x"></i>&emsp;
-                    <i class="fab fa-linkedin fa-2x"></i>&emsp;
-                    <i class="far fa-envelope fa-2x"></i>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 py-4">
+            <span class="footHeading py-2"
+              >Contact Us
+              <hr id="line" />
+            </span>
+            <i class="fa fa-home"></i> ABC, That Street, Delhi, India <br />
+            <i class="fa fa-phone"></i> +910123456789
+          </div>
+          <div class="col-12 col-sm-6 py-4">
+            <span class="footHeading"
+              >Social Media
+              <hr id="line" />
+            </span>
+            <i class="fab fa-github fa-2x"></i>&emsp;
+            <i class="fab fa-linkedin fa-2x"></i>&emsp;
+            <i class="far fa-envelope fa-2x"></i>
+          </div>
         </div>
+      </div>
 
-        <div class="bg-dark text-light py-2">
-            <div class="d-flex justify-content-center align-items-center">
-                Copyrights &copy;
-                <script>
-                    let date = new Date();
-                    document.write(date.getFullYear());
-                </script>
-                by Sanchit
-            </div>
+      <div class="bg-dark text-light py-2">
+        <div class="d-flex justify-content-center align-items-center">
+          Copyrights &copy;
+          <script>
+            let date = new Date();
+            document.write(date.getFullYear());
+          </script>
+          by Sanchit
         </div>
+      </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-</body>
-
+    <script>
+      console.log("inside index.html");
+      var jwt = window.localStorage.getItem("jwt");
+      console.log("jwt from index");
+      console.log(jwt);
+    </script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
