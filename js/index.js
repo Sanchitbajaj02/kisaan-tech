@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
       window.localStorage.setItem("userId", result.user.id);
       window.localStorage.setItem("email", result.user.email);
       window.localStorage.setItem("username", result.user.username);
-      window.location.href = "/index.html";
+      window.location.href = "./index.html";
     } else {
       console.log("invalid credentials");
     }
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
       window.localStorage.setItem("jwt", result.jwt);
       window.localStorage.setItem("userId", result.user.id);
       window.localStorage.setItem("email", result.user.email);
-      window.location.href = "/login.html";
+      window.location.href = "./login.html";
     } else {
       console.log("invalid credentials");
     }
