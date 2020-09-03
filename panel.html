@@ -123,6 +123,9 @@
                                 <h4>Humidity in Delhi</h4>
                                 <img src="./image/weather.png" alt="humidity" width="90%">
                             </div>
+                            <div>
+                                <a href="./index.html" onclick="deleteToken()" class="btn btn-danger text-white">Logout</a>
+                            </div>
                         </div>
 
                         <!-- account data -->
@@ -250,6 +253,13 @@
             document.getElementById("nameHead").innerHTML = name;
             document.getElementById("emailHead").innerHTML = email; 
 
+        }
+
+        function deleteToken() {
+            window.localStorage.removeItem("jwt");
+            window.localStorage.removeItem("email");
+            window.localStorage.removeItem("username");
+            window.localStorage.removeItem("userId");
         }
     </script>
     <script src="./js/index.js"></script>
