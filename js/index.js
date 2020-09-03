@@ -56,9 +56,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const result = await resp.json();
     console.log(result);
     if (responseCode == 200) {
-      window.localStorage.setItem("jwt", result.jwt);
-      window.localStorage.setItem("userId", result.user.id);
-      window.localStorage.setItem("email", result.user.email);
+      // window.localStorage.setItem("jwt", result.jwt);
+      // window.localStorage.setItem("userId", result.user.email);
+      // window.localStorage.setItem("email", result.user.email);
       window.location.href = "./login.html";
     } else {
       console.log("invalid credentials");

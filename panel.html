@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kisaan-Tech | Home</title>
+    <script src="./js/constants.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand" href="">Kisaan-Tech</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-1">
+                        <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa fa-home"></i>
+                            Home</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link active" href="./services.html"><i class="fa fa-id-card"></i> Services</a>
+                    </li>
+                    <div id="nameuser">
+                        <li class="nav-item mx-1">
+                            <a class="nav-link text-info" href="./login.html"><i class="fa fa-key"></i> Login</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link text-danger" href="./register.html"><i class="fa fa-lock"></i>
+                                Register</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- breadcrumb -->
+    <div class="container my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">Admin Panel</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- panel -->
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- left side navbar -->
+            <div class="col-lg-3 col-md-4 d-md-block d-none">
+                <div class="card card-left bg-common">
+                    <div class="card-body">
+                        <nav class="nav d-md-block">
+                            <a data-toggle="tab" class="nav-link active" aria-current="page" href="#profile">
+                                <i class="fa fa-user mr-1"></i> Dashboard
+                            </a>
+                            <a data-toggle="tab" class="nav-link" href="#account">
+                                <i class="fa fa-user-cog mr-1"></i> Edit Profile
+                            </a>
+                            <a data-toggle="tab" class="nav-link" href="#security">
+                                <i class="fa fa-user-shield mr-1"></i> Security
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right side div -->
+            <div class="col-lg-9 col-md-8">
+                <div class="card">
+                    <div class="card-header border-bottom mb-1 d-md-none">
+                        <ul class="nav nav-tabs card-header-tabs nav-fill">
+                            <li class="nav-item">
+                                <a data-toggle="tab" class="nav-link active" aria-current="page" href="#profile"><i
+                                        class="fa fa-user mr-1"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="tab" class="nav-link" href="#account"><i
+                                        class="fa fa-user-cog mr-1"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="tab" class="nav-link" href="#security"><i
+                                        class="fa fa-user-shield mr-1"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- right side content -->
+                    <div class="card-body tab-content border-0 bg-content">
+                        <!-- profile data -->
+                        <div class="tab-pane active" id="profile">
+                            <h4>ACCOUNT INFORMATION</h4>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12 col-sm-4 h6">User Name: </div>
+                                <div class="col-12 col-sm-8"><span id="nameHead"></span> </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 col-sm-4 h6">Email Address: </div>
+                                <div class="col-12 col-sm-8"><span id="emailHead"></span></div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 col-sm-4 h6">Location: </div>
+                                <div class="col-12 col-sm-8">Delhi</div>
+                            </div>
+                            <br>
+                            <div class="container my-3">
+                                <h4>Humidity in Delhi</h4>
+                                <img src="./image/weather.png" alt="humidity" width="90%">
+                            </div>
+                        </div>
+
+                        <!-- account data -->
+                        <div class="tab-pane" id="account">
+                            <h4>ACCOUNT SETTINGS</h4>
+                            <hr />
+                            <form>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username"
+                                        placeholder="Enter Username" />
+                                    <small class="form-text text-muted">After changing your username, your username
+                                        becomes
+                                        available for anyone else to claim.</small>
+                                </div>
+                                <hr />
+                                <div class="mb-3">
+                                    <label for="deleteaccount" class="form-label text-danger">Delete Account</label>
+                                    <p class="text-muted">
+                                        Once you delete your account, there is no going back.
+                                        Please be certain.
+                                    </p>
+                                </div>
+                                <br />
+                                <button type="submit" class="btn btn-danger">
+                                    Delete Account
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- security data -->
+                        <div class="tab-pane" id="security">
+                            <h4>SECURITY SETTINGS</h4>
+                            <hr />
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="text" class="form-control" id="Email"
+                                        placeholder="Enter Email Address" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Old Password" /><br />
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="New Password" /><br />
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Confirm New Password" />
+                                </div>
+                                <button class="btn btn-success" type="button">Update</button>
+                            </form>
+
+                            <hr />
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-label d-block mb-2">Two Factor Authentication</label>
+                                    <button class="btn btn-info" type="submit" id="auth">
+                                        Enable two-factor authentication
+                                    </button>
+                                    <p class="text-muted small">
+                                        Two-factor Authentication adds an additional layer of
+                                        security to your account by requiring more than just a
+                                        password to login.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 py-4">
+                    <span class="footHeading py-2">Contact Us
+                        <hr id="line" />
+                    </span>
+                    <i class="fa fa-home"></i> ABC, That Street, Delhi, India <br />
+                    <i class="fa fa-phone"></i> +910123456789
+                </div>
+                <div class="col-12 col-sm-6 py-4">
+                    <span class="footHeading">Social Media
+                        <hr id="line" />
+                    </span>
+                    <i class="fab fa-github fa-2x"></i>&emsp;
+                    <i class="fab fa-linkedin fa-2x"></i>&emsp;
+                    <i class="far fa-envelope fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-dark text-light py-2">
+            <div class="d-flex justify-content-center align-items-center">
+                Copyrights &copy;
+                <script>
+                    let date = new Date();
+                    document.write(date.getFullYear());
+                </script>
+                by Kisaan-Tech
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        console.log("inside panel");
+        var jwt = window.localStorage.getItem("jwt");
+        var name = window.localStorage.getItem("username");
+        var email = window.localStorage.getItem("email");
+        console.log("jwt from index");
+        console.log(jwt);
+
+        if (jwt) {
+            document.getElementById('nameuser').innerHTML = `<li class="nav-item mx-1">
+              <a class="nav-link active" href="./panel.html">${name}</a>
+            </li>`;
+
+            document.getElementById("nameHead").innerHTML = name;
+            document.getElementById("emailHead").innerHTML = email; 
+
+        }
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

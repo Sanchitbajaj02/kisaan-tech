@@ -1,154 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kisaan-Tech | Login</title>
-    <script src="./js/constants.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/form.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kisaan-Tech | Home</title>
+  <script src="./js/constants.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
-  <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container py-2">
-        <a class="navbar-brand" href="">Kisaan-Tech</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand" href="">Kisaan-Tech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-1">
+            <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link active" href="./services.html"><i class="fa fa-id-card"></i> Services</a>
+          </li>
+          <div id="nameuser">
             <li class="nav-item mx-1">
-              <a class="nav-link active" aria-current="page" href="./index.html"
-                >Home</a
-              >
+              <a class="nav-link text-info" href="./login.html"><i class="fa fa-key"></i> Login</a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link" href="./services.html">Services</a>
+              <a class="nav-link text-danger" href="./register.html"><i class="fa fa-lock"></i> Register</a>
             </li>
-            <li class="nav-item mx-1">
-              <a
-                class="nav-link btn btn-info text-white"
-                role="button"
-                href="./login.html"
-                >Login</a
-              >
-            </li>
-            <li class="nav-item mx-1">
-              <a
-                class="nav-link btn btn-danger text-white"
-                role="button"
-                href="./register.html"
-                >Register</a
-              >
-            </li>
-          </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- breadcrumb -->
+  <div class="container my-5">
+    <nav aria-label="Page breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+        <li class="breadcrumb-item" aria-current="page">Login</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- form -->
+  <section class="section">
+    <div class="box">
+      <div class="form">
+        <h2>Login</h2>
+        <form action="./index.html" id="loginForm" method="POST">
+          <div class="inputBx">
+            <input type="text" name="email" id="email" placeholder="email" />
+            <i class="fa fa-envelope fa-lg faLog"></i>
+          </div>
+          <div class="inputBx">
+            <input type="password" name="password" id="password" placeholder="password" />
+            <i class="fa fa-key fa-lg faLog"></i>
+          </div>
+          <div class="inputBx">
+            <input type="submit" value="Login" />
+          </div>
+        </form>
+        <p>Forget <a href="#">Password</a></p>
+        <p>Need an <a href="/register.html">Account</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 py-4">
+          <span class="footHeading py-2">Contact Us
+            <hr id="line" />
+          </span>
+          <i class="fa fa-home"></i> ABC, That Street, Delhi, India <br />
+          <i class="fa fa-phone"></i> +910123456789
+        </div>
+        <div class="col-12 col-sm-6 py-4">
+          <span class="footHeading">Social Media
+            <hr id="line" />
+          </span>
+          <i class="fab fa-github fa-2x"></i>&emsp;
+          <i class="fab fa-linkedin fa-2x"></i>&emsp;
+          <i class="far fa-envelope fa-2x"></i>
         </div>
       </div>
-    </nav>
-
-    <!-- breadcrumb -->
-    <div class="container my-5">
-      <nav aria-label="Page breadcrumb">
-        <ol class="breadcrumb">
-          <a
-            class="breadcrumb-item active"
-            aria-current="page"
-            href="./index.html"
-            >Home</a
-          >
-          <a class="breadcrumb-item" href="./login.html">Login</a>
-        </ol>
-      </nav>
     </div>
 
-    <!-- form -->
-    <section class="section">
-      <div class="box">
-        <div class="form">
-          <h2>Login</h2>
-          <form action="./index.html" id="loginForm" method="POST">
-            <div class="inputBx">
-              <input type="text" name="email" id="email" placeholder="email" />
-              <i class="fa fa-envelope fa-lg faLog"></i>
-            </div>
-            <div class="inputBx">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="password"
-              />
-              <i class="fa fa-key fa-lg faLog"></i>
-            </div>
-            <div class="inputBx">
-              <input type="submit" value="Login" />
-            </div>
-          </form>
-          <p>Forget <a href="#">Password</a></p>
-          <p>Need an <a href="/register.html">Account</a></p>
-        </div>
+    <div class="bg-dark text-light py-2">
+      <div class="d-flex justify-content-center align-items-center">
+        Copyrights &copy;
+        <script>
+          let date = new Date();
+          document.write(date.getFullYear());
+        </script>
+        by Kisaan-Tech
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-6 py-4">
-            <span class="footHeading py-2"
-              >Contact Us
-              <hr id="line" />
-            </span>
-            <i class="fa fa-home"></i> ABC, That Street, Delhi, India <br />
-            <i class="fa fa-phone"></i> +910123456789
-          </div>
-          <div class="col-12 col-sm-6 py-4">
-            <span class="footHeading"
-              >Social Media
-              <hr id="line" />
-            </span>
-            <i class="fab fa-github fa-2x"></i>&emsp;
-            <i class="fab fa-linkedin fa-2x"></i>&emsp;
-            <i class="far fa-envelope fa-2x"></i>
-          </div>
-        </div>
-      </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    console.log("inside login");
+    var jwt = window.localStorage.getItem("jwt");
+    var name = window.localStorage.getItem("username");
+    console.log("jwt from index");
+    console.log(jwt);
 
-      <div class="bg-dark text-light py-2">
-        <div class="d-flex justify-content-center align-items-center">
-          Copyrights &copy;
-          <script>
-            let date = new Date();
-            document.write(date.getFullYear());
-          </script>
-          by Sanchit
-        </div>
-      </div>
-    </footer>
+    if (jwt) {
+      document.getElementById('nameuser').innerHTML = `<li class="nav-item mx-1">
+              <a class="nav-link active" href="./panel.html">${name}</a>
+            </li>`;
+    }
+  </script>
+  <script src="./js/index.js"></script>
+</body>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
-  </body>
 </html>

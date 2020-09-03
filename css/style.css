@@ -20,13 +20,15 @@
 
 .banner-context {
   background: rgba(255, 255, 255, 0.5);
-  padding: 15%;
+  padding: 10% 0% 10% 0%;
   border-radius: 1rem;
   text-align: center;
 }
 
 .banner .banner-context p {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .about-section {
@@ -90,4 +92,11 @@
 .carousel-inner .carousel-item-right,
 .carousel-inner .carousel-item-left {
   transform: translateX(0);
+}
+
+@media (min-width: 769px) {
+  #nameuser {
+    display: flex;
+    justify-content: space-around;
+  }
 }
