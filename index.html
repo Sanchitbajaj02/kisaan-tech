@@ -42,24 +42,26 @@
               >
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link" href="./services.html">Services</a>
+              <a class="nav-link active" href="./services.html">Services</a>
             </li>
-            <li class="nav-item mx-1">
-              <a
-                class="nav-link btn btn-info text-white"
-                role="button"
-                href="./login.html"
-                >Login</a
-              >
-            </li>
-            <li class="nav-item mx-1">
-              <a
-                class="nav-link btn btn-danger text-white"
-                role="button"
-                href="./register.html"
-                >Register</a
-              >
-            </li>
+            <div id="nameuser" class="d-flex justify-content-space-around">
+              <li class="nav-item mx-1">
+                <a
+                  class="nav-link btn btn-info text-white"
+                  role="button"
+                  href="./login.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item mx-1">
+                <a
+                  class="nav-link btn btn-danger text-white"
+                  role="button"
+                  href="./register.html"
+                  >Register</a
+                >
+              </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -262,8 +264,15 @@
     <script>
       console.log("inside index.html");
       var jwt = window.localStorage.getItem("jwt");
+      var name = window.localStorage.getItem("username");
       console.log("jwt from index");
       console.log(jwt);
+
+      if (jwt) {
+        document.getElementById('nameuser').innerHTML = `<li class="nav-item mx-1">
+              <a class="nav-link active" href="#">Hello: ${name}</a>
+            </li>`;
+      }
     </script>
     <script src="./js/index.js"></script>
   </body>
