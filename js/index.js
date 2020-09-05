@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
       window.localStorage.setItem("userId", result.user.id);
       window.localStorage.setItem("email", result.user.email);
       window.localStorage.setItem("username", result.user.username);
+      window.localStorage.setItem("location", result.user.location);
       window.location.href = "./index.html";
     } else {
       console.log("invalid credentials");
@@ -48,6 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
         email: signupForm["email"].value,
         username: signupForm["username"].value,
         password: signupForm["password"].value,
+        location: signupForm["location"].value
       }),
     });
 

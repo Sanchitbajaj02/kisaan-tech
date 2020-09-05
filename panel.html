@@ -105,26 +105,33 @@
                         <!-- profile data -->
                         <div class="tab-pane active" id="profile">
                             <h4>ACCOUNT INFORMATION</h4>
-                            <hr>
+                            <hr />
                             <div class="row">
-                                <div class="col-12 col-sm-4 h6">User Name: </div>
-                                <div class="col-12 col-sm-8"><span id="nameHead"></span> </div>
-                            </div><br>
-                            <div class="row">
-                                <div class="col-12 col-sm-4 h6">Email Address: </div>
-                                <div class="col-12 col-sm-8"><span id="emailHead"></span></div>
-                            </div><br>
-                            <div class="row">
-                                <div class="col-12 col-sm-4 h6">Location: </div>
-                                <div class="col-12 col-sm-8">Delhi</div>
+                                <div class="col-12 col-sm-4 h6">User Name:</div>
+                                <div class="col-12 col-sm-8"><span id="nameHead"></span></div>
                             </div>
-                            <br>
+                            <br />
+                            <div class="row">
+                                <div class="col-12 col-sm-4 h6">Email Address:</div>
+                                <div class="col-12 col-sm-8">
+                                    <span id="emailHead"></span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-12 col-sm-4 h6">Location:</div>
+                                <div class="col-12 col-sm-8">
+                                    <span id="locHead"></span>
+                                </div>
+                            </div>
+                            <br />
                             <div class="container my-3">
-                                <h4>Humidity in Delhi</h4>
-                                <img src="./image/weather.png" alt="humidity" width="90%">
+                                <input type="submit" class="button" value="Get Location info">
+                                <p class="info"></p>
                             </div>
                             <div>
-                                <a href="./index.html" onclick="deleteToken()" class="btn btn-danger text-white">Logout</a>
+                                <a href="./index.html" onclick="deleteToken()"
+                                    class="btn btn-danger text-white">Logout</a>
                             </div>
                         </div>
 
@@ -242,24 +249,56 @@
         var jwt = window.localStorage.getItem("jwt");
         var name = window.localStorage.getItem("username");
         var email = window.localStorage.getItem("email");
+        var loc = window.localStorage.getItem("location");
+        var info = document.querySelector(".info");
+        var button = document.querySelector(".button");
         console.log("jwt from index");
         console.log(jwt);
 
         if (jwt) {
-            document.getElementById('nameuser').innerHTML = `<li class="nav-item mx-1">
+            document.getElementById(
+                "nameuser"
+            ).innerHTML = `<li class="nav-item mx-1">
               <a class="nav-link active" href="./panel.html">${name}</a>
             </li>`;
 
             document.getElementById("nameHead").innerHTML = name;
-            document.getElementById("emailHead").innerHTML = email; 
-
+            document.getElementById("emailHead").innerHTML = email;
+            document.getElementById("locHead").innerHTML = loc;
         }
+
+        button.addEventListener("click", () => {
+            //   event.preventDefault();
+            fetch(
+                "https://api.openweathermap.org/data/2.5/weather?q=London&appid=99fbb68a714163ea74cdb650fa671af6"
+            )
+                .then((resp) => resp.json())
+                .then((data) => {
+                    var nameValue = data["name"];
+                    var tempValue = data["main"]["temp"];
+                    var descValue = data["weather"][0]["description"];
+                    var humid = data["main"]["humidity"];
+                    console.log(data);
+
+                    info.innerHTML = `
+                    City name: ${nameValue} <br>
+                    Temperature: ${tempValue} <br>
+                    Description: ${descValue} <br>
+                    Humidity: ${humid}
+                    `;
+                })
+                .catch((err) => alert(err));
+            
+            document.getElementById("display").style.background = "#cccccc";
+            document.getElementById("display").style.margin = "10%";
+        });
 
         function deleteToken() {
             window.localStorage.removeItem("jwt");
             window.localStorage.removeItem("email");
             window.localStorage.removeItem("username");
             window.localStorage.removeItem("userId");
+            window.localStorage.removeItem("location");
         }
     </script>
     <script src="./js/index.js"></script>

@@ -53,6 +53,10 @@ body{
 .drone {
   width: 100%;
 }
+.img-fluid {
+  width: 500px;
+  height: 250px;
+}
 
 
 /* footer css starts here */

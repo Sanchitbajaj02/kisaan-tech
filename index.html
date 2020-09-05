@@ -83,7 +83,9 @@
           <div class="carousel-item active">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid drone" src="./image/drone2.jpeg" />
+                <div class="drone">
+                  <img class="img-fluid" src="./image/device1.jpeg" />
+                </div>
                 <div>
                   <h4>Title</h4>
                   <p>
@@ -98,7 +100,9 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid drone" src="./image/drone2.jpeg" />
+                <div class="drone">
+                  <img class="img-fluid" src="./image/device2.jpeg" />
+                </div>
                 <div>
                   <h4>Title</h4>
                   <p>
@@ -113,7 +117,9 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid drone" src="./image/drone2.jpeg" />
+                <div class="drone">
+                  <img class="img-fluid" src="./image/device3.jpeg" />
+                </div>
                 <div>
                   <h4>Title</h4>
                   <p>
@@ -128,7 +134,9 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid drone" src="./image/drone2.jpeg" />
+                <div class="drone">
+                  <img class="img-fluid drone" src="./image/device4.jpeg" />
+                </div>
                 <div>
                   <h4>Title</h4>
                   <p>
@@ -143,7 +151,9 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid drone" src="./image/drone2.jpeg" />
+                <div class="drone">
+                  <img class="img-fluid" src="./image/device5.jpeg" />
+                </div>
                 <div>
                   <h4>Title</h4>
                   <p>
@@ -155,7 +165,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <!-- <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
                 <img class="img-fluid drone" src="./image/drone2.jpeg" />
@@ -169,7 +179,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
@@ -225,7 +235,7 @@
 
   <script>
     function save() {
-      var product1 = document.getElementById('product');
+      var product1 = document.getElementById("product");
       window.localStorage.setItem("product", product);
     }
 
@@ -236,7 +246,9 @@
     console.log(jwt);
 
     if (jwt) {
-      document.getElementById('nameuser').innerHTML = `<li class="nav-item mx-1">
+      document.getElementById(
+        "nameuser"
+      ).innerHTML = `<li class="nav-item mx-1">
               <a class="nav-link active" href="./panel.html">${name}</a>
             </li>`;
     }
