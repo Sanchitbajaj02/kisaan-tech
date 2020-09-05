@@ -12,7 +12,7 @@
     #262626 50%,
     #607d8b 100%
   ); */
-  background: #262626;
+  /* background: #262626; */
   filter: hue-rotate(120deg);
   animation: animate 10s linear infinite;
 }
@@ -63,7 +63,7 @@
 }
 
 .box .form h2 {
-  color: #ffffff;
+  /* color: #ffffff; */
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 30px;
@@ -83,14 +83,14 @@
   padding: 8px 10px;
   padding-left: 35px;
   border-radius: 6px;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 16px;
   font-weight: 300;
   box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.2);
 }
 
 .box .form .inputBx input::placeholder {
-  color: #ffffff;
+  color: #000000;
 }
 
 .box .form .inputBx input[type="submit"] {
@@ -109,7 +109,7 @@
   top: 15px;
   left: 10px;
   transform: scale(0.7);
-  filter: invert(1);
+  /* filter: invert(1); */
 }
 
 .remember {
@@ -122,14 +122,14 @@
 }
 
 .box .form p {
-  color: #ffffff;
+  color: #000000;
   font-weight: 300;
   font-size: 15px;
   margin-top: 5px;
 }
 
 .box .form a {
-  color: #ffffff;
+  color: #000000;
 }
 
 /* login form css starts here */

@@ -17,7 +17,7 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container py-2">
-      <a class="navbar-brand" href="">Kisaan-Tech</a>
+      <a class="navbar-brand" href="./index.html">Kisaan-Tech</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
             <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa fa-home"></i> Home</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link active" href="./services.html"><i class="fa fa-id-card"></i> Services</a>
+            <a class="nav-link active" href="./services.html"><i class="fa fa-list"></i> My Products</a>
           </li>
           <div id="nameuser">
             <li class="nav-item mx-1">
@@ -48,27 +48,18 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-        <li class="breadcrumb-item" aria-current="page">Services</li>
+        <li class="breadcrumb-item" aria-current="page">My Products</li>
       </ol>
     </nav>
   </div>
 
   <div class="container">
-    <h2 style="text-align: center; font-size: 3rem; font-weight: 500;">Services</h2>
+    <h2 style="text-align: center; font-size: 3rem; font-weight: 500;">My Products</h2>
     <br />
-    <p class="py-3">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ad
-      beatae quis sit? Qui fugit, itaque fugiat aliquam pariatur veniam error
-      accusantium accusamus, rerum at impedit vitae quod sint minima mollitia
-      quos earum. Voluptatem illum corrupti deleniti quam perspiciatis minus
-      accusamus beatae quae, possimus saepe sed mollitia, magni nam officiis
-      maiores quibusdam facilis recusandae cum labore voluptate. Eos quas quo
-      amet neque velit veniam minima. Quam minima praesentium aliquam quis.
-      Dolore vel, voluptates nam quos magnam debitis nisi. Obcaecati,
-      repellendus veniam, nulla non quas odio id eveniet deleniti nobis
-      voluptatibus voluptates nostrum minima omnis, eaque accusamus enim magni
-      nisi numquam?
-    </p>
+    <div id="pro">
+    </div>
+    
+    
   </div>
 
   <!-- footer -->
@@ -109,6 +100,8 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="./js/product.js"></script>
+
   <script>
     console.log("inside services");
     var jwt = window.localStorage.getItem("jwt");
@@ -121,6 +114,8 @@
               <a class="nav-link active" href="./panel.html">${name}</a>
             </li>`;
     }
+    
+
   </script>
   <script src="./js/index.js"></script>
 </body>

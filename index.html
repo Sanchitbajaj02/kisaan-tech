@@ -17,7 +17,7 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container py-2">
-      <a class="navbar-brand" href="">Kisaan-Tech</a>
+      <a class="navbar-brand" href="./index.html">Kisaan-Tech</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
             <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa fa-home"></i> Home</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link active" href="./services.html"><i class="fa fa-id-card"></i> Services</a>
+            <a class="nav-link active" href="./services.html"><i class="fa fa-list"></i> My Products</a>
           </li>
           <div id="nameuser">
             <li class="nav-item mx-1">
@@ -83,13 +83,14 @@
           <div class="carousel-item active">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid" src="http://placehold.it/380?text=1" />
+                <img class="img-fluid drone" src="./image/drone2.jpeg" />
                 <div>
                   <h4>Title</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Est molestias ratione sit accusantium, ipsa omnis.
                   </p>
+                  <a href="#" role="button" class="btn btn-primary" id="product1" onclick="save()">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -97,13 +98,14 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid" src="http://placehold.it/380?text=2" />
+                <img class="img-fluid drone" src="./image/drone2.jpeg" />
                 <div>
                   <h4>Title</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Est molestias ratione sit accusantium, ipsa omnis.
                   </p>
+                  <a href="#" role="button" class="btn btn-primary" id="product" onclick="save()">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -111,13 +113,14 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid" src="http://placehold.it/380?text=3" />
+                <img class="img-fluid drone" src="./image/drone2.jpeg" />
                 <div>
                   <h4>Title</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Est molestias ratione sit accusantium, ipsa omnis.
                   </p>
+                  <a href="#" role="button" class="btn btn-primary" id="product" onclick="save()">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -125,13 +128,14 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid" src="http://placehold.it/380?text=4" />
+                <img class="img-fluid drone" src="./image/drone2.jpeg" />
                 <div>
                   <h4>Title</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Est molestias ratione sit accusantium, ipsa omnis.
                   </p>
+                  <a href="#" role="button" class="btn btn-primary" id="product" onclick="save()">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -139,13 +143,14 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid" src="http://placehold.it/380?text=5" />
+                <img class="img-fluid drone" src="./image/drone2.jpeg" />
                 <div>
                   <h4>Title</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Est molestias ratione sit accusantium, ipsa omnis.
                   </p>
+                  <a href="#" role="button" class="btn btn-primary" id="product" onclick="save()">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -153,13 +158,14 @@
           <div class="carousel-item">
             <div class="col-md-4">
               <div class="card card-body">
-                <img class="img-fluid" src="http://placehold.it/380?text=6" />
+                <img class="img-fluid drone" src="./image/drone2.jpeg" />
                 <div>
                   <h4>Title</h4>
                   <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Est molestias ratione sit accusantium, ipsa omnis.
                   </p>
+                  <a href="#" role="button" class="btn btn-primary" id="product" onclick="save()">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -215,7 +221,14 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="./js/product.js"></script>
+
   <script>
+    function save() {
+      var product1 = document.getElementById('product');
+      window.localStorage.setItem("product", product);
+    }
+
     console.log("inside index");
     var jwt = window.localStorage.getItem("jwt");
     var name = window.localStorage.getItem("username");

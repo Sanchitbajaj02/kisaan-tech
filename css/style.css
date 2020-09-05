@@ -5,6 +5,16 @@
   scroll-behavior: smooth;
 }
 
+body{
+  background: linear-gradient(
+    #55cbd4b6 10%,
+    #C7DAC7 40%,
+    #FFB68D 60%,
+    #FE8D7B 90%,
+    #fa6a87 100%
+  );
+}
+
 .banner {
   height: 85vh;
   background: url("../image/david-henrichs-72AYEEBJpz4-unsplash.jpg") center
@@ -38,6 +48,10 @@
 }
 .h2 {
   font-size: 3rem;
+}
+
+.drone {
+  width: 100%;
 }
 
 
