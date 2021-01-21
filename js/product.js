@@ -1,7 +1,5 @@
-var product = window.localStorage.getItem("product");
-
-if (product) {
-  document.querySelector("#pro").innerHTML = `
+function save(event) {
+  document.querySelector(event).innerHTML = `
         <div class="row my-3">
         <div class="col-12 col-sm-4">
           <div class="card">
@@ -17,6 +15,5 @@ if (product) {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi cupiditate aliquam unde adipisci dolor eius quos rem expedita autem eveniet explicabo architecto reprehenderit, vero assumenda laudantium perspiciatis suscipit at fugiat?</p>
         </div>
       </div>`;
-
-    window.localStorage.removeItem("product");
 }
+

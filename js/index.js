@@ -25,7 +25,6 @@ window.addEventListener("DOMContentLoaded", () => {
       window.localStorage.setItem("userId", result.user.id);
       window.localStorage.setItem("email", result.user.email);
       window.localStorage.setItem("username", result.user.username);
-      window.localStorage.setItem("location", result.user.location);
       window.location.href = "./index.html";
     } else {
       console.log("invalid credentials");
@@ -48,8 +47,7 @@ window.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({
         email: signupForm["email"].value,
         username: signupForm["username"].value,
-        password: signupForm["password"].value,
-        location: signupForm["location"].value
+        password: signupForm["password"].value
       }),
     });
 
@@ -69,33 +67,33 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // for non-auth protected routes (basically no authenticaion requirement)
-window.addEventListener("DOMContentLoaded", async () => {
-  const resp = await fetch(constants.baseURL + "/products");
-  const result = await resp.json();
-  console.log(result);
-});
+// window.addEventListener("DOMContentLoaded", async () => {
+//   const resp = await fetch(constants.baseURL + "/products");
+//   const result = await resp.json();
+//   console.log(result);
+// });
 
 // for auth protected routes
-window.addEventListener("DOMContentLoaded", async () => {
-  const resp = await fetch(constants.baseURL + "/orders", {
-    headers: {
-      Authorization: "Bearer " + jwt,
-    },
-  });
-  const result = await resp.json();
-  console.log(result);
-});
+// window.addEventListener("DOMContentLoaded", async () => {
+//   const resp = await fetch(constants.baseURL + "/orders", {
+//     headers: {
+//       Authorization: "Bearer " + jwt,
+//     },
+//   });
+//   const result = await resp.json();
+//   console.log(result);
+// });
 
 // for auth protected routes
-window.addEventListener("DOMContentLoaded", async () => {
-  const resp = await fetch(
-    constants.baseURL + "/users/" + window.localStorage.getItem("userId"),
-    {
-      headers: {
-        Authorization: "Bearer " + jwt,
-      },
-    }
-  );
-  const result = await resp.json();
-  console.log(result);
-});
+// window.addEventListener("DOMContentLoaded", async () => {
+//   const resp = await fetch(
+//     constants.baseURL + "/users/" + window.localStorage.getItem("userId"),
+//     {
+//       headers: {
+//         Authorization: "Bearer " + jwt,
+//       },
+//     }
+//   );
+//   const result = await resp.json();
+//   console.log(result);
+// });

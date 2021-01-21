@@ -1,7 +1,7 @@
 // Card Carousel JS
 
 $("#recipeCarousel").carousel({
-  interval: 5000,
+  interval: 8000,
 });
 
 $(".carousel .carousel-item").each(function () {

@@ -121,15 +121,15 @@
                             <div class="row">
                                 <div class="col-12 col-sm-4 h6">Location:</div>
                                 <div class="col-12 col-sm-8">
-                                    <span id="locHead"></span>
+                                    <input type="text" name="locHead" class="locHead">
                                 </div>
                             </div>
                             <br />
-                            <div class="container my-3">
-                                <input type="submit" class="button" value="Get Location info">
+                            <div class="my-3">
+                                <input type="submit" class="button btn btn-info" value="Get Location info">
                                 <p class="info"></p>
                             </div>
-                            <div>
+                            <div class="my-3">
                                 <a href="./index.html" onclick="deleteToken()"
                                     class="btn btn-danger text-white">Logout</a>
                             </div>
@@ -245,11 +245,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script>
+        var loc = document.querySelector(".locHead");
         console.log("inside panel");
         var jwt = window.localStorage.getItem("jwt");
         var name = window.localStorage.getItem("username");
         var email = window.localStorage.getItem("email");
-        var loc = window.localStorage.getItem("location");
+        // var loc = window.localStorage.getItem("location");
         var info = document.querySelector(".info");
         var button = document.querySelector(".button");
         console.log("jwt from index");
@@ -264,13 +265,13 @@
 
             document.getElementById("nameHead").innerHTML = name;
             document.getElementById("emailHead").innerHTML = email;
-            document.getElementById("locHead").innerHTML = loc;
+            // document.getElementById("locHead").innerHTML = loc;
         }
 
         button.addEventListener("click", () => {
             //   event.preventDefault();
             fetch(
-                "https://api.openweathermap.org/data/2.5/weather?q=London&appid=99fbb68a714163ea74cdb650fa671af6"
+                'https://api.openweathermap.org/data/2.5/weather?q='+loc.value+'&appid=99fbb68a714163ea74cdb650fa671af6'
             )
                 .then((resp) => resp.json())
                 .then((data) => {
@@ -281,16 +282,17 @@
                     console.log(data);
 
                     info.innerHTML = `
-                    City name: ${nameValue} <br>
-                    Temperature: ${tempValue} <br>
-                    Description: ${descValue} <br>
-                    Humidity: ${humid}
+                    <div class="bg-light font-bold">
+                        <p class="py-1">City name: ${nameValue}<p>
+                        <p class="py-1">Temperature: ${tempValue}K<p>
+                        <p class="py-1">Description: ${descValue}<p>
+                        <p class="py-1">Humidity: ${humid}% <p>
+                       
+                    </div>
                     `;
                 })
                 .catch((err) => alert(err));
             
-            document.getElementById("display").style.background = "#cccccc";
-            document.getElementById("display").style.margin = "10%";
         });
 
         function deleteToken() {
